@@ -1,4 +1,26 @@
-# Difference between Different Data Structures
+
+# Data Structures in Python
+
+#### Difference between Different Data Structures
+
+#### Contents:
+- Lists and its inbuilt methods like
+  - append()
+  - extend()
+  - insert()
+  - max()
+  - min()
+  - pop()
+  - len()
+- Sets
+  - intersection()
+  - difference()
+  - add()
+- Dictionaries
+- Tuples
+  - count()
+  - index()
+
 
 ### 1. Lists
 - **Ordered**: Elements in a list are ordered by their position, and you can access elements by their index.
