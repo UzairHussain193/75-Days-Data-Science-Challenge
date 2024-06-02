@@ -94,3 +94,7 @@ Applying the learned concepts and techniques to real-world data science projects
 ---
 
 This repository will be continuously updated with new learning materials, code examples, and project details as I progress through the challenge. Stay tuned for more updates!
+
+---
+
+This is the link to repo which contains multiple and wide reange of datasets: [DataSets](https://code.datasciencedojo.com/datasciencedojo/datasets)
