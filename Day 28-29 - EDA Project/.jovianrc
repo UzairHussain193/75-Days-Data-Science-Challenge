@@ -1,3 +1,7 @@
 {
-  "notebooks": {}
+  "notebooks": {
+    "zerotopandas-course-project.ipynb": {
+      "slug": "0ce306fd27b249769b16ca9a88115f17"
+    }
+  }
 }
