@@ -142,3 +142,208 @@ These notes cover the basic usage of SQL constraints to enforce rules on the dat
 
 ---
 
+# SQL Constraints Notes
+
+## SQL Constraints
+SQL constraints are rules applied to table columns to ensure the integrity, accuracy, and reliability of data. They can be applied at the column level or table level.
+
+### Types of Constraints
+1. **Not Null Constraints**: Ensures that a column cannot have a NULL value.
+2. **Unique Constraints**: Ensures that all values in a column are unique.
+3. **Primary Key**: Uniquely identifies each record in a table.
+4. **Foreign Key**: Ensures referential integrity by linking two tables.
+5. **Check Constraints**: Ensures that all values in a column satisfy a specific condition.
+6. **Default Constraints**: Sets a default value for a column when no value is specified.
+7. **Index**: Improves the performance of queries.
+
+## SQL Script
+
+### Creating Databases and Tables
+
+#### Create and Use Database
+```sql
+CREATE DATABASE customer;
+USE customer;
+```
+
+#### Create `person` Table with Composite Primary Key
+```sql
+CREATE TABLE person (
+    id INT NOT NULL,
+    first_name VARCHAR(25) NOT NULL,
+    last_name VARCHAR(25) NOT NULL,
+    age INT,
+    CONSTRAINT pk_person PRIMARY KEY(id, last_name)
+);
+```
+
+#### Drop the `person` Table
+```sql
+DROP TABLE person;
+```
+
+### Unique and Primary Key Constraints
+
+#### Create `person` Table without Primary Key
+```sql
+CREATE TABLE person (
+    id INT NOT NULL,
+    first_name VARCHAR(25) NOT NULL,
+    last_name VARCHAR(25) NOT NULL,
+    age INT
+);
+```
+
+#### Describe `person` Table
+```sql
+DESC person;
+```
+
+#### Add Primary Key on `id`
+```sql
+ALTER TABLE person ADD PRIMARY KEY(id);
+```
+
+#### Drop the `person` Table
+```sql
+DROP TABLE person;
+```
+
+#### Create `person` Table with Composite Primary Key on `id` and `age`
+```sql
+CREATE TABLE person (
+    id INT NOT NULL,
+    first_name VARCHAR(25) NOT NULL,
+    last_name VARCHAR(25) NOT NULL,
+    age INT
+);
+
+ALTER TABLE person ADD CONSTRAINT pk_person PRIMARY KEY(id, age);
+```
+
+#### Describe `person` Table with Composite Primary Key
+```sql
+DESC person;
+```
+
+#### Drop Primary Key
+```sql
+ALTER TABLE person DROP PRIMARY KEY;
+```
+
+#### Drop the `person` Table
+```sql
+DROP TABLE person;
+```
+
+#### Show All Tables in `customer` Database
+```sql
+SHOW TABLES;
+```
+
+### Foreign Key Constraints
+
+#### Create `person` Table
+```sql
+CREATE TABLE person (
+    id INT NOT NULL,
+    first_name VARCHAR(25) NOT NULL,
+    last_name VARCHAR(25) NOT NULL,
+    age INT,
+    salary INT,
+    PRIMARY KEY(id)
+);
+
+DESC person;
+```
+
+#### Create `department` Table with Foreign Key Constraint
+```sql
+CREATE TABLE department (
+    id INT NOT NULL,
+    department_id INT NOT NULL,
+    department_name VARCHAR(25) NOT NULL,
+    PRIMARY KEY(department_id),
+    CONSTRAINT fk_persondepartment FOREIGN KEY(id) REFERENCES person(id)
+);
+
+DESC department;
+```
+
+#### Drop the `department` Table
+```sql
+DROP TABLE department;
+```
+
+#### Create `department` Table without Foreign Key
+```sql
+CREATE TABLE department (
+    id INT NOT NULL,
+    department_id INT NOT NULL,
+    department_name VARCHAR(25) NOT NULL,
+    PRIMARY KEY(department_id)
+);
+
+DESC department;
+```
+
+#### Add Foreign Key Constraint to `department` Table
+```sql
+ALTER TABLE department ADD FOREIGN KEY(id) REFERENCES person(id);
+```
+
+#### Drop the `department` and `person` Tables
+```sql
+DROP TABLE department;
+DROP TABLE person;
+```
+
+### Check Constraints
+
+#### Create `person` Table with Check Constraint
+```sql
+CREATE TABLE person (
+    id INT NOT NULL,
+    first_name VARCHAR(25) NOT NULL,
+    last_name VARCHAR(25) NOT NULL,
+    age INT,
+    salary INT,
+    PRIMARY KEY(id),
+    CHECK(salary < 50000) -- Ensures salary is less than 50000
+);
+
+-- Insert records into the person table
+-- The following will give an error due to salary constraint violation
+-- INSERT INTO person VALUES (1, 'Uzair', 'Hussain', 21, 51000);
+
+INSERT INTO person VALUES (1, 'Uzair', 'Hussain', 21, 15000);
+
+-- Select all records from the person table
+SELECT * FROM person;
+
+-- Drop the person table
+DROP TABLE person;
+```
+
+### Default Constraints
+
+#### Create `person` Table with Default Constraint
+```sql
+CREATE TABLE person (
+    id INT NOT NULL,
+    first_name VARCHAR(25) NOT NULL,
+    last_name VARCHAR(25) NOT NULL,
+    city_name VARCHAR(25) DEFAULT 'Hyderabad' -- Sets default value for city_name
+);
+
+DESC person;
+```
+
+#### Drop Default Constraint
+```sql
+ALTER TABLE person ALTER city_name DROP DEFAULT;
+```
+
+This script includes commands to create tables, insert data, apply various constraints, and manage constraints as specified.
+
+---
