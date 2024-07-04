@@ -97,10 +97,11 @@ A researcher standing outside a mall surveying passersby about their shopping ha
 | **Convenience Sampling**    | Selecting members that are easiest to reach.                    | Surveying shoppers at a mall.                              |
 
 
+---
+---
 
 
 # Day 33 - Tutorial 3 
----
 
 - Variables and its types
 
@@ -111,3 +112,101 @@ A researcher standing outside a mall surveying passersby about their shopping ha
       -  Continous
     - Qualitative Variables
       - Classification of variables 
+
+
+## Variables and Their Types
+
+### Definition:
+Variables are characteristics or properties that can take on different values. They are fundamental in statistics as they represent the data collected in a study or experiment.
+
+### Types of Variables:
+Variables are categorized into two main types: Quantitative and Qualitative.
+
+#### Quantitative Variables:
+Quantitative variables are numerical and can be measured. They are further divided into two subtypes:
+
+1. **Discrete Variables:**
+   - **Definition:** Discrete variables are countable in a finite amount of time. They represent items that can be counted.
+   - **Examples:** Number of students in a class, number of cars in a parking lot.
+
+2. **Continuous Variables:**
+   - **Definition:** Continuous variables can take on any value within a given range. They are measurable and often require tools for measurement.
+   - **Examples:** Height of individuals, time taken to complete a task.
+
+#### Qualitative Variables:
+Qualitative variables are descriptive and categorize individuals or items. They can be classified into different categories.
+
+1. **Classification of Variables:**
+   - **Definition:** This involves grouping variables into distinct categories based on their attributes.
+   - **Examples:** Gender (male, female), blood type (A, B, AB, O).
+
+---
+---
+
+# Day 34 - Tutorial 4
+
+-  Measure of Central Tendency
+-  Mean
+   -  for Population
+   -  for Sample
+-  Median
+   -  for Population
+   -  for Sample
+-  Mode
+   -  for Population
+   -  for Sample
+- Applications of all these three.
+
+
+## Measure of Central Tendency
+
+### Definition:
+Measures of central tendency describe the center or typical value of a dataset. They provide a summary of the dataset by identifying the central point.
+
+### Types of Measures of Central Tendency:
+
+1. **Mean:**
+   - **Definition:** The mean is the average of all the data points in a dataset.
+   - **For Population:**
+     - **Formula:** \(\mu = \frac{\sum X}{N}\)
+     - **Explanation:** The sum of all data points divided by the total number of data points in the population.
+     - **Example:** For the data set {2, 4, 6, 8}, the population mean is \(\frac{2 + 4 + 6 + 8}{4} = 5\).
+
+   - **For Sample:**
+     - **Formula:** \(\bar{X} = \frac{\sum X}{n}\)
+     - **Explanation:** The sum of all data points divided by the number of data points in the sample.
+     - **Example:** For the sample {3, 5, 7}, the sample mean is \(\frac{3 + 5 + 7}{3} = 5\).
+
+2. **Median:**
+   - **Definition:** The median is the middle value of a dataset when it is ordered from least to greatest.
+   - **For Population:**
+     - **Explanation:** Arrange the data points in ascending order and find the middle value.
+     - **Example:** For the data set {1, 3, 3, 6, 7, 8, 9}, the median is 6.
+
+   - **For Sample:**
+     - **Explanation:** Arrange the sample data points in ascending order and find the middle value.
+     - **Example:** For the sample {2, 3, 5, 8}, the median is the average of 3 and 5, which is 4.
+
+3. **Mode:**
+   - **Definition:** The mode is the value that appears most frequently in a dataset.
+   - **For Population:**
+     - **Explanation:** Identify the value that occurs most often in the population data.
+     - **Example:** For the data set {2, 4, 4, 4, 5, 6, 6}, the mode is 4.
+
+   - **For Sample:**
+     - **Explanation:** Identify the value that occurs most often in the sample data.
+     - **Example:** For the sample {1, 2, 2, 3, 3, 3, 4}, the mode is 3.
+
+### Applications of Mean, Median, and Mode:
+- **Mean:** Used to calculate the average performance, such as average test scores, average income, etc.
+- **Median:** Useful in determining the middle value in income distribution, housing prices, etc., especially when the data is skewed.
+- **Mode:** Often used in categorical data to find the most common category, such as the most common blood type in a population, or the most frequently purchased product.
+
+
+---
+---
+
+# Day 35 - Tutorial 5
+
+-  Measure of Dispersion
+-  
