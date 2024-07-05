@@ -209,4 +209,71 @@ Measures of central tendency describe the center or typical value of a dataset. 
 # Day 35 - Tutorial 5
 
 -  Measure of Dispersion
--  
+  - Variance
+    - for sample
+    - for population
+  - Standard Deviation
+    - for sample
+    - for population
+
+## Measure of Dispersion
+
+### Definition:
+Measures of dispersion describe the spread or variability of a dataset. They provide insights into how much the data points differ from the central tendency (mean, median, mode). The main measures of dispersion are variance and standard deviation.
+
+### Types of Measure of Dispersion:
+
+1. **Variance:**
+   - **Definition:** Variance measures the average of the squared differences between each data point and the mean. It provides a sense of how much the data points vary from the mean.
+
+   - **For Sample:**
+     - **Formula:** \( s^2 = \frac{\sum (X_i - \bar{X})^2}{n - 1} \)
+     - **Explanation:** 
+       - \(X_i\): Each individual data point
+       - \(\bar{X}\): Sample mean
+       - \(n\): Number of data points in the sample
+       - The formula calculates the average squared deviation from the sample mean, divided by \(n - 1\) (degrees of freedom).
+     - **Example:** For a sample dataset {4, 8, 6, 5, 3}, the sample mean \(\bar{X} = \frac{4 + 8 + 6 + 5 + 3}{5} = 5.2\). The sample variance is:
+       \[
+       s^2 = \frac{(4-5.2)^2 + (8-5.2)^2 + (6-5.2)^2 + (5-5.2)^2 + (3-5.2)^2}{5 - 1} = \frac{1.44 + 7.84 + 0.64 + 0.04 + 4.84}{4} = 3.2
+       \]
+
+   - **For Population:**
+     - **Formula:** \( \sigma^2 = \frac{\sum (X_i - \mu)^2}{N} \)
+     - **Explanation:**
+       - \(X_i\): Each individual data point
+       - \(\mu\): Population mean
+       - \(N\): Total number of data points in the population
+       - The formula calculates the average squared deviation from the population mean.
+     - **Example:** For a population dataset {4, 8, 6, 5, 3}, the population mean \(\mu = \frac{4 + 8 + 6 + 5 + 3}{5} = 5.2\). The population variance is:
+       \[
+       \sigma^2 = \frac{(4-5.2)^2 + (8-5.2)^2 + (6-5.2)^2 + (5-5.2)^2 + (3-5.2)^2}{5} = \frac{1.44 + 7.84 + 0.64 + 0.04 + 4.84}{5} = 2.56
+       \]
+
+2. **Standard Deviation:**
+   - **Definition:** Standard deviation is the square root of the variance. It provides a measure of the average distance of each data point from the mean, in the same units as the data.
+
+   - **For Sample:**
+     - **Formula:** \( s = \sqrt{s^2} \)
+     - **Explanation:** The standard deviation is the square root of the sample variance.
+     - **Example:** Using the sample variance \(s^2 = 3.2\) from the previous example, the sample standard deviation \(s = \sqrt{3.2} \approx 1.79\).
+
+   - **For Population:**
+     - **Formula:** \( \sigma = \sqrt{\sigma^2} \)
+     - **Explanation:** The standard deviation is the square root of the population variance.
+     - **Example:** Using the population variance \(\sigma^2 = 2.56\) from the previous example, the population standard deviation \(\sigma = \sqrt{2.56} \approx 1.6\).
+
+### Applications of Variance and Standard Deviation:
+- **Variance and Standard Deviation:** These metrics are used to assess the risk in finance, quality control in manufacturing, and variability in scientific research. They help in understanding how spread out the data points are around the mean, indicating the degree of uncertainty or consistency in the data.
+
+---
+---
+
+# Day 36 - Tutorial 6
+
+- Percentile
+- Quartile
+
+# Day 36 - Tutorial 7
+
+-  5 numbers summary and box plot
