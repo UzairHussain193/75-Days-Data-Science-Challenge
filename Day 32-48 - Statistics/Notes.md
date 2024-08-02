@@ -277,3 +277,4 @@ Measures of dispersion describe the spread or variability of a dataset. They pro
 # Day 36 - Tutorial 7
 
 -  5 numbers summary and box plot
+Thanks
